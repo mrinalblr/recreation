@@ -14,3 +14,74 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: myFont;
+    src: url('../assets/fonts/ProzaLibre-Regular.ttf');
+}
+
+*{
+  font-family: myFont;
+}
+
+// .toolbar-ios{
+//   margin-top: 0px;
+// }
+
+.toolbar{
+  min-height: 75px!important;
+}
+
+
+
+.back-button{
+  color: #ffffff!important;
+}
+
+.toolbar-title{
+    font-size: 16px!important;
+    color:primary;
+    //text-transform: !important;
+    //font-weight: bold!important;
+}
+
+.vertical-align-content > *
+{
+     display: flex!important;
+     align-content: center!important;
+     align-items: center!important;
+}
+
+.font-extrasmall{
+  font-size: 10px!important;
+}
+.font-small{
+  font-size: 12px!important;
+}
+.font-standard{
+  font-size: 14px!important;
+}
+.font-big{
+  font-size: 16px!important;
+}
+.font-huge{
+  font-size: 18px!important;
+}
+.font-extrahuge{
+  font-size: 20px!important;
+}
+
+.font-bold{
+  font-weight: bold!important;
+}
+
+.margin-padding-0{
+  margin: 0px;
+  padding: 0px;
+}
+.width-100{
+  width: 100%;
+}
+button{
+  text-transform: none!important;
+}

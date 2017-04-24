@@ -24,11 +24,17 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  primary:      #048DDF,
+  secondary:    #3d9958,
+  danger:       #FFA700,
+  light:        #f4f4f4,
+  dark:         #222,
+  semidark:     #717171,
+  facebook:     #3B5998,
+  google:       #DF4A32,
+  extralight:   #909090,
+  header:       #E5475E,
+  button-color: #E5475E
 );
 
 
@@ -68,7 +74,7 @@ $colors: (
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/v2/ionicons/
 
-@import "ionic.ionicons";
+@import "ionicons";
 
 
 // Fonts

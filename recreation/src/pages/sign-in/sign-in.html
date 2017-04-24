@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title >
+       Recreation
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form #signupForm="ngForm" novalidate>
+    <ion-list no-lines padding-top>
+      <ion-item>
+        <ion-label stacked>FirstName</ion-label>
+        <ion-input [(ngModel)]="signup.firstname" placeholder="John" name="firstname" type="text" #firstname="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="firstname.valid || submitted == false" color="danger" padding-left>
+        Firstname is required
+      </p>
+      <ion-item>
+        <ion-label stacked>LastName</ion-label>
+        <ion-input [(ngModel)]="signup.lastname" placeholder="Smith" name="lastname" type="text" #lastname="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="lastname.valid || submitted == false" color="danger" padding-left>
+        Lastname is required
+      </p>
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input [(ngModel)]="signup.email" placeholder="someone@somewhere.com" name="email" type="email" #email="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="email.valid || submitted == false" color="danger" padding-left>
+        Email is required
+      </p>
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input [(ngModel)]="signup.password" placeholder="Min 8 characters including atleast one uppercase" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="password.valid || submitted == false" color="danger" padding-left>
+        Password is required
+      </p>
+    </ion-list>
+    <div padding>
+      <button class="font-standard" ion-button block outline color="primary" (click)="register(signupForm)">Sign Up</button>
+    </div>
+  </form>
+
+</ion-content>

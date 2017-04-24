@@ -1,0 +1,14 @@
+page-sign-up {
+  .nice-background {
+    background-image: url('../assets/images/main_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  ion-item{
+    border-bottom: 1px solid color($colors, "semidark")!important;
+  }
+  .item.item-input {
+    background-color: transparent;
+  }
+
+}
