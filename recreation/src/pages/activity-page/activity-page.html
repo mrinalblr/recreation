@@ -1,4 +1,6 @@
-<ion-header>
+<!-- Original -->
+
+<!-- <ion-header>
   <ion-navbar color="primary">
     <ion-title>
        {{activity}}
@@ -14,7 +16,7 @@
       <p>{{sportsName}}</p>
     </ion-item>
 
-    <!-- <img src="img/advance-card-bttf.png"> -->
+
 
     <ion-card-content>
       <p>{{description}}</p>
@@ -24,7 +26,7 @@
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="ios-contact-outline"></ion-icon>
-      
+
         </button>
       </ion-col>
       <ion-col>
@@ -37,6 +39,63 @@
         <ion-note>
           11h ago
         </ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+  <ion-content> -->
+
+<!-- Testing  -->
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+       {{activity}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+  <ion-content class="nice-background">
+    <ion-card>
+
+    <ion-item>
+      <ion-row>
+        <ion-col>
+        <ion-icon name="ios-contact-outline"></ion-icon>
+
+        </ion-col>
+        <ion-col>
+          <span>Host Name</span>
+        </ion-col>
+
+      </ion-row>
+
+      <p>{{activity}}</p>
+      <p>Venue</p>
+      <p>Date & Time</p>
+    </ion-item>
+
+
+
+    <ion-card-content>
+      <p>Description goes Here...</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear class="font-small" (click)="callHost()">
+          <ion-icon name="ios-call">  call</ion-icon>
+
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear class="font-small" >
+          <ion-icon name="ios-text">  chat</ion-icon>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear class="font-standard font-bold" >
+          Join
+        </button>
       </ion-col>
     </ion-row>
 

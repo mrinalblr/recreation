@@ -7,21 +7,25 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import{SignupPage} from '../pages/signup/signup';
+import {SignupPage} from '../pages/signup/signup';
 import {SignIn} from '../pages/sign-in/sign-in';
-import {Test} from '../pages/test/test';
+import {TabsPage} from '../pages/tabs/tabs';
 import {RestClient} from '../providers/rest-client';
 import {ActivityListPage} from '../pages/activity-list-page/activity-list-page';
 import {ActivityPage} from '../pages/activity-page/activity-page';
+import {MyAccountPage} from '../pages/my-account/my-account';
+import {MyActivityPage} from '../pages/my-activity/my-activity';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SignupPage,
     SignIn,
-    Test,
+    TabsPage,
     ActivityListPage,
-    ActivityPage
+    ActivityPage,
+    MyAccountPage,
+    MyActivityPage
 
   ],
   imports: [
@@ -35,9 +39,11 @@ import {ActivityPage} from '../pages/activity-page/activity-page';
     HomePage,
     SignupPage,
     SignIn,
-    Test,
+    TabsPage,
     ActivityListPage,
-    ActivityPage
+    ActivityPage,
+    MyAccountPage,
+    MyActivityPage
 
   ],
   providers: [
@@ -45,7 +51,7 @@ import {ActivityPage} from '../pages/activity-page/activity-page';
     StatusBar,
     SplashScreen,
     RestClient,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

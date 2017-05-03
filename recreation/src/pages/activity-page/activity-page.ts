@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {CallNumber} from 'ionic-native';
 import {RestClient} from '../../providers/rest-client';
 /**
  * Generated class for the ActivityPage page.
@@ -52,5 +53,11 @@ export class ActivityPage {
     this.time = response.time;
     this.venue = response.venue;
     this.description = response.description;
+  }
+  public callHost(){
+    CallNumber.callNumber("7358411170",true)
+    .then(() =>
+    console.log('Launched Dialer!'))
+    .catch(() => console.log('Error Launching Dialer') );
   }
 }
