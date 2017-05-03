@@ -14,6 +14,8 @@ export class RestClient {
 
    private registerUserUrl="http://localhost:9400/users/register";
    private loginUrl="http://localhost:9400/users/login";
+   private getAllSportsUrl="http://localhost:9400/sports/getAllSports";
+   private addSportsUrl="http://localhost:9400/sports/addSports"
 
   constructor(public http: Http) {
     console.log('Hello RestClient Provider');
@@ -29,5 +31,17 @@ export class RestClient {
        let options = new RequestOptions({headers:headers});
        return this.http.post(this.loginUrl,param,options)
        .map(res => res.json());
+   }
+   getAllSports(param){
+     let headers= new Headers({'Content-Type':'application/json'});
+     let options = new RequestOptions({headers:headers});
+     return this.http.post(this.getAllSportsUrl,param,options)
+     .map(res => res.json());
+   }
+   addSports(param){
+     let headers= new Headers({'Content-Type':'application/json'});
+     let options = new RequestOptions({headers:headers});
+     return this.http.post(this.addSportsUrl,param,options)
+     .map(res => res.json());
    }
 }

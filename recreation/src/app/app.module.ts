@@ -9,14 +9,19 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import{SignupPage} from '../pages/signup/signup';
 import {SignIn} from '../pages/sign-in/sign-in';
-
+import {Test} from '../pages/test/test';
 import {RestClient} from '../providers/rest-client';
+import {ActivityListPage} from '../pages/activity-list-page/activity-list-page';
+import {ActivityPage} from '../pages/activity-page/activity-page';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SignupPage,
-    SignIn
+    SignIn,
+    Test,
+    ActivityListPage,
+    ActivityPage
 
   ],
   imports: [
@@ -29,7 +34,10 @@ import {RestClient} from '../providers/rest-client';
     MyApp,
     HomePage,
     SignupPage,
-    SignIn
+    SignIn,
+    Test,
+    ActivityListPage,
+    ActivityPage
 
   ],
   providers: [

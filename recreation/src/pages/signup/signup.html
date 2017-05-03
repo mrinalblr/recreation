@@ -6,7 +6,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding text-center text-wrap class="nice-background">
+<ion-content >
 
 
     <form #loginForm="ngForm" novalidate>
@@ -30,14 +30,14 @@
         </p>
       </ion-list>
       <div padding>
-        <button class="font-standard" ion-button block outline color="primary" (click)="login(loginForm)">Login</button>
+        <button class="font-standard" ion-button block  color="primary" (click)="login(loginForm)" type="submit">Login</button>
       </div>
     </form>
 
   <div class="padding"></div>
 
-  <div class="font-standard font-bold" padding-vertical>Don't have an account yet?</div>
-
-  <button class="font-standard" ion-button block outline color="primary" (click)="signup()">Sign Up</button>
-
+  <div class="font-standard font-bold" padding-vertical text-center>Don't have an account yet?</div>
+   <div padding>
+  <button class="font-standard" ion-button block outline color="primary" (click)="signup()" type="submit">Sign Up</button>
+</div>
 </ion-content>
