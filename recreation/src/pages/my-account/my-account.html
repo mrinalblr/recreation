@@ -1,17 +1,35 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title >
-       Recreation
+    <ion-title>
+      Recreation
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content class="card-background-page nice-background" >
-  <ion-card>
+<ion-content class="card-background-page nice-background">
+  <ion-card style="opacity:0.6;">
     <ion-item>
-    <!-- <ion-avatar  class="avatar-margin">
-      <img src="../assets/images/Mrinal.jpg" >
-    </ion-avatar> -->
-      <img src="../assets/images/Mrinal.jpg" style="max-width:50%;margin-left:25%">
-  </ion-item>
+      <!-- <img src="../assets/images/Mrinal.jpg" style="max-width:50%;margin-left:25%" (click)="openFileChooser()"> -->
+      <img   [src]="_DomSanitizationService.bypassSecurityTrustUrl(base64Image)" style="max-width:50%;margin-left:25%" *ngIf="base64Image" (click)="openFileChooser()">
+
+    </ion-item>
+    <ion-card-content>
+             <ion-row  class="font-standard">
+               <ion-icon name="ios-contact"  class="row-margin">  Mrinal Deo</ion-icon>
+            </ion-row>
+            <br>
+            <ion-row class="font-standard">
+              <ion-icon name="ios-mail" class="row-margin">  mrinal.deo2@gmail.com</ion-icon>
+            </ion-row>
+            <br>
+            <ion-row class="font-standard">
+                <ion-icon name="ios-calendar" class="row-margin">  22/05/1993</ion-icon>
+            </ion-row>
+            <br>
+            <ion-row class="font-standard">
+                <ion-icon name="ios-call" class="row-margin">  7358411170</ion-icon>
+            </ion-row>
+            <br>
+
+    </ion-card-content>
   </ion-card>
 </ion-content>
